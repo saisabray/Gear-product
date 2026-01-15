@@ -125,8 +125,63 @@ nav {
     border-color: rgba(192, 204, 218, 0.1);
     padding: 36px 62px;
     gap: 61px;
-    flex-wrap: wrap;
+    margin-bottom: 130px;
 }
+
+.card-section {
+    max-width: 1050px;
+    margin: 0 auto;
+
+
+}
+
+.section-title {
+    text-align: center;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(3, 476px); */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    box-shadow: 0 5px 8px 2px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 17px 15px;
+
+}
+
+.card img {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+}
+
+.title {
+    font-size: var(--title);
+    color: var(--primary-color);
+    font-weight: 600;
+
+}
+
+.card-para {
+    font-size: var(--card-para);
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.dollar {
+    font-size: var(--brand-logo);
+    color: var(--tertiary-color);
+}
+
 
 /* Responsive here */
 @media screen and (max-width:576px) {
@@ -143,6 +198,10 @@ nav {
 
     #mnav-logo {
         display: block;
+    }
+
+    nav {
+        padding: 15px;
     }
 
     .banner {
@@ -165,6 +224,10 @@ nav {
         font-size: var(--card-para);
     }
 
+    .brand-logo {
+        font-size: var(--primary-fontsize);
+    }
+
     .hide {
         display: none;
     }
@@ -172,7 +235,21 @@ nav {
     .ecommerce-container {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 38px;
-        justify-content: center
+        gap: 36px;
+        justify-content: center;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .card-section {
+        padding: 0 15px;
+    }
+
+    .card {
+        max-height: 100%;
     }
 }
